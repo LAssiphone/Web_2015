@@ -1,5 +1,6 @@
 <?
     header('Content-Type: text/html');
+    if (isset ($_GET["text"]) ? $_GET["text"] : '');
     $text = trim($_GET["text"]);
 ?>
 	
