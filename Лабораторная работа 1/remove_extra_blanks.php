@@ -1,8 +1,11 @@
 <?
-    header('Content-Type: text/html');
+    header('Content-Type: text/plain');
     $text = isset($_GET["text"]) ? $_GET["text"] : '';
-    str_replace(' ','',$text);
     $text = trim($_GET["text"]);
-    echo ($text);
+    while(strpos($text , '  ') !== false)
+    {
+        $text = str_replace('  ' , ' ' , $text);
+    };
+	echo ("#{$text}#");
 ?>	
     
