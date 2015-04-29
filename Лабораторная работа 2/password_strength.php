@@ -9,7 +9,7 @@
         $len = strlen($password);
 
         $n = $len;
-        if (strlen(preg_replace('/[^a-z,A-Z,0-9]/', '', $password)) < 0)
+        if (strlen(preg_replace('/[^a-zA-Z0-9]/', '', $password)) != $len)
         {
             echo ('Password contains invalid characters');
         }
@@ -35,7 +35,7 @@
                 $security -= $len;
                 echo ("password contains only digits ; security -$len ; security = {$security}<br>");
             }
-            if (strlen(preg_replace('/[^A-Z,a-z]/', '', $password)) == $len)
+            if (strlen(preg_replace('/[^A-Za-z]/', '', $password)) == $len)
             {
                 $security -= $len;
                 echo ("password contains only letters ; security -$len ; security = {$security}<br>");
