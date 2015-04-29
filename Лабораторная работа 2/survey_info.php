@@ -1,8 +1,10 @@
 <?php
     include 'include/common.inc.php';
     
+    $email = GetParamFromGet('email');
+    
     $file = "data/{$email}.txt";
-        
+       
     if (!file_exists($file))
     {
         echo 'E-mail can not be found , please try again';
