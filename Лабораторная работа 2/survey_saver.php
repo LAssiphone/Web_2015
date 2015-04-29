@@ -1,11 +1,6 @@
 <?php
     include 'include/common.inc.php';
-    
-    $first_name = GetParamFromGet('first_name');
-    $last_name = GetParamFromGet('last_name');
-    $email = GetParamFromGet('email');
-    $age = GetParamFromGet('age');
-   
+  
     $file = "data/{$email}.txt";
     $data = array
         (
