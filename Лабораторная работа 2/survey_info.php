@@ -1,36 +1,14 @@
 <?php
-    include 'include/common.inc.php';
+    require 'include/common.inc.php';
     
-    $email = GetParamFromGet('email');
+    $email = GetRequiredParamFromGet('email');
     
-    $file = "data/{$email}.txt";
-       
-    if (!file_exists($file))
-    {
-        echo 'E-mail can not be found , please try again';
-        return;
-    }
+    $file = GetFileFromEMail($email);
     
-    if (isset($_GET['email']))
+    $data =  DataFromFile($file);
+    
+    foreach ($data as  $key => $value)
     {
-        $data = file($file);
-        foreach ($data as $line)
-        {
-            $line = trim($line);
-            list($key , $value) = explode(':' , $line);
-            if ($value == "")
-            {
-                $value = '...';
-            }
-            $info[$key] = $value;
-        }
-        foreach ($info as  $key => $value)
-        {
-            echo ("{$key} : {$value} <br>");
-        }        
-    }
-    else
-    {
-        echo 'E -Mail not specified';
-        return;
-    }
+        echo ("{$key} : {$value} <br>");
+    }        
+   

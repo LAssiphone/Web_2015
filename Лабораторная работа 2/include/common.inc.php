@@ -1,3 +1,6 @@
 <?php
-    include 'string.inc.php';
-    include 'request.inc.php';
+    require 'string.inc.php';
+    require 'request.inc.php';
+    require 'bd_user.inc.php';
+    require 'verify_pass.inc.php';
+    
