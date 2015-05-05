@@ -29,13 +29,13 @@
         $security += ($len-$n)*2;
         
 
-        if (strlen(preg_replace('/[^0-9]/', '', $pass)) == $len)
+        if ($len == strlen(preg_replace('/[^0-9]/', '', $pass)))
         {
             $security -= $len;
         }
         
         
-        if (strlen(preg_replace('/[^A-Za-z]/', '', $pass)) == $len)
+        if ($len == strlen(preg_replace('/[^A-Za-z]/', '', $pass)))
         {
             $security -= $len;
         }
