@@ -1,10 +1,6 @@
 <?php
     require 'include/common.inc.php';
     
-    $first_name = GetParamFromGet('first_name');
-    $last_name = GetParamFromGet('last_name');    
-    $age = GetParamFromGet('age');
-    
     $email = GetRequiredParamFromGet('email');
    
     $file = CreateFileFromEMail($email);
