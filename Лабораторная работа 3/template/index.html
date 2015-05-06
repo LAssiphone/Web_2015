@@ -1,12 +1,21 @@
-<h1>{$headline}</h1>
-
-<p>Hello, {$name}</p>
-
-<h2>Users</h2>
-{foreach from=$users item=user}
-  <label>Name: </label><span>{$user.name|escape:html}</span><br/>
-  <label>Surname: </label><span>{$user.surname|escape:html}</span><br/>
-  <label>Age: </label><span>{$user.age}</span><br/>
-{/foreach}
-
+<h1> Table sinuses </h1>
+<p>You can select a table step, to Get parameter "degree" and "minute"</p>
+<p>If the parameters are not applicable, you specify an invalid value, and used the default settings</p>
+<p>Degree step = {$degMove}, Minute step = {$minMove}</p>
+<table>
+  <tr>
+    <td class="scale_table name">sin</td>
+    {foreach from=$table.0 key=minute item=minutes}
+      <td class="scale_table minute">{$minute}'</td>
+    {/foreach}
+  </tr>
+  {foreach from=$table key=degree item=degrees}
+    <tr>
+      <td class="scale_table degree">{$degree}&deg;</td>
+      {foreach from=$degrees key=minute item=value}
+        <td>{$value}</td>
+      {/foreach} 
+    </tr>
+  {/foreach}
+</table>
 

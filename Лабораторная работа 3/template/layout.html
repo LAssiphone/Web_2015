@@ -2,11 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Template engine</title>    
+    <title>Template engine</title> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <!-- place code for header here -->
-    {$content}
-    <!-- place code for footer here -->
+    <header>Header</header>
+    <nav>
+      Sidebar
+      <ul>
+        <li><a href="index.php">Table Sinuses</a></li>
+        <li><a href="survey_form.php">Survey Form</a></li>
+        <li><a href="surveys.php">Surveys</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      {$content}
+    </div>
+    <footer>Footer</footer>
   </body>
 </html>

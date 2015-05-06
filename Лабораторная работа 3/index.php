@@ -1,18 +1,17 @@
 <?php
     require_once('include/common.inc.php');
+    require_once('include/tableSin.php');
+    
+    $degMove = GetDegMoveFromGet("degree");
+    $minMove = GetMinMoveFromGet("minute");
+    
+    $table = TableSin($degMove, $minMove);
      
-    $users = array
-    (
-        array('name' => 'Sarah', 'surname' => 'Rever', 'age' => 32),
-        array('name' => 'Chuck', 'surname' => 'Norris', 'age' => 142),
-        array('name' => 'Dart',  'surname' => 'Veider', 'age' => 356)
-    );
-        
     $vars = array
     (
-        'headline' => 'Template Engine',
-        'name' => 'Sarah',
-        'users' => $users
+        'degMove' => $degMove,
+        'minMove' => $minMove,
+        'table' => $table
     );
 
     buildLayout('index.html', $vars);
