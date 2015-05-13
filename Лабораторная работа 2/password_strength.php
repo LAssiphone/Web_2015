@@ -1,9 +1,19 @@
 <?php
     require 'include/common.inc.php';
     
-    $pass = GetRequiredParamFromGet('password');
+    $pass = GetParamFromGet('password');
+    if ($pass == "") 
+    {
+        echo "Password not specified";
+        exit;
+    } 
   
-    CheckPass($pass);
+    $pass = CheckPass($pass);
+    if (!$pass) 
+    {
+        echo "Password contains invalid characters";
+        exit;
+    }
 
     $security = PassSecurity($pass);
 

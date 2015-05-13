@@ -4,11 +4,21 @@
     $first_name = GetParamFromGet('first_name');		
     $last_name = GetParamFromGet('last_name');    		
     $age = GetParamFromGet('age');
-    
-    $email = GetRequiredParamFromGet('email');
+
+    $email = GetParamFromGet('email');
+    if ($email == "") 
+    {
+        echo "E-Mail not specified";
+        exit;
+    }   
    
-    $file = CreateFileFromEMail($email);
-    
+    $filePath = GetFilePath($email);
+    if (file_exists($filePath))
+    {
+        echo 'E -Mail is already in use , specify a different';
+        exit;
+    }
+        
     $data = array
         (
             "Email" => $email,
@@ -17,5 +27,6 @@
             "Age" => $age
         );      
    
-    DataInFile($file, $data);
-       
+    $result = DataInFile($filePath, $data);
+    echo $result;
+   

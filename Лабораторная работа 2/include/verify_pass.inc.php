@@ -3,50 +3,78 @@
     {
         if (preg_replace('/[^a-zA-Z0-9]/', "", $pass) != $pass)
         {
-            echo ('Password contains invalid characters');
-            exit;
+            return;
+        }
+        else
+        {
+            return $pass;
         }
     }
     
     function PassSecurity($pass)
     {
         $security = 0;
-        $len = strlen($pass);
-
-        $n = $len;
-        $security += 4*$n;
-       
-
+        
+        $security += CalcSecurityForLength($pass);
+        $security += CalcSecurityForDigt($pass);
+        $security += CalcSecurityForUpperCase($pass);
+        $security += CalcSecurityForLowerCase($pass);
+        $security -= CalcSecurityOnlyDigt($pass);
+        $security -= CalcSecurityOnlyLetter($pass);
+        $security -= CalcSecurityRepSymbol($pass);
+            
+        return $security;
+    }
+    
+    function CalcSecurityForLength($pass)
+    {
+        $n = strlen($pass);
+        return 4*$n;
+    }  
+    
+    function CalcSecurityForDigt($pass)
+    {
         $n = strlen(preg_replace('/[^0-9]/', '', $pass));
-        $security += $n*4;
-        
-
+        return $n*4;
+    }   
+    
+    function CalcSecurityForUpperCase($pass)
+    {
         $n = strlen(preg_replace('/[^A-Z]/', '', $pass));        
-        $security += ($len-$n)*2;
-        
+        return (strlen($pass)-$n)*2;
+    }   
 
+    function CalcSecurityForLowerCase($pass)
+    {
         $n = strlen(preg_replace('/[^a-z]/', '', $pass));
-        $security += ($len-$n)*2;
-        
+        return (strlen($pass)-$n)*2;
+    }   
 
-        if ($len == strlen(preg_replace('/[^0-9]/', '', $pass)))
+    function CalcSecurityOnlyDigt($pass)
+    {
+        if (strlen($pass) == strlen(preg_replace('/[^0-9]/', '', $pass)))
         {
-            $security -= $len;
+            return strlen($pass);
         }
-        
-        
-        if ($len == strlen(preg_replace('/[^A-Za-z]/', '', $pass)))
+    }   
+    
+    function CalcSecurityOnlyLetter($pass)
+    {        
+        if (strlen($pass) == strlen(preg_replace('/[^A-Za-z]/', '', $pass)))
         {
-            $security -= $len;
+            return strlen($pass);
         }
+    }
         
+    function CalcSecurityRepSymbol($pass)
+    {
+        $count = 0; 
         foreach (count_chars($pass, 1) as $i => $val)
         {
             if ($val > 1)
             {
-                $security -= $val;
+                $count += $val;
             }            
         }
-        
-        return $security;
+        return $cont;
     }

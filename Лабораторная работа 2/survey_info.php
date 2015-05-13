@@ -1,14 +1,20 @@
 <?php
     require 'include/common.inc.php';
     
-    $email = GetRequiredParamFromGet('email');
-    
-    $file = GetFileFromEMail($email);
-    
-    $data =  DataFromFile($file);
-    
-    foreach ($data as  $key => $value)
+    $email = GetParamFromGet('email');
+    if ($email == "") 
     {
-        echo ("{$key} : {$value} <br>");
-    }        
-   
+        echo "E-Mail not specified";
+        exit;
+    } 
+    
+    $filePath = GetFilePath($email);
+    if (!file_exists($filePath))
+    {
+        echo 'E-mail can not be found , please try again';
+        exit;
+    }
+    
+    $data =  DataFromFile($filePath);
+    
+    PrintDataArrey($data);
