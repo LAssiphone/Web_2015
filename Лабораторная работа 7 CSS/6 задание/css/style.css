@@ -1,0 +1,66 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: arial;
+}
+
+h1
+{
+    font-size: 34px;
+    font-weight: normal;
+    border-bottom: solid 2px blue;
+    margin-bottom: 35px;
+}
+
+div 
+{
+    width: 220px;
+    height: 205px;
+    border: solid 1px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+p
+{
+    color: rgb(50,50,46);
+    margin: 0;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold; 
+}
+
+.cat1
+{
+    background: url("../images/texture1.jpg");
+}
+
+.cat2
+{
+    background: url("../images/texture3.jpg");
+}
+
+.cat3
+{
+    background: url("../images/texture2.jpg");
+}
+.buttom 
+{
+    border:none;
+    width: 298px;
+    height: 35px;
+    background: url("../images/button.png");
+    font-weight: bold; 
+}
+
+.buttom:hover
+{
+    background: url("../images/button-over.png");
+    cursor: pointer;    
+}

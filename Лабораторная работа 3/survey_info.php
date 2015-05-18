@@ -3,8 +3,9 @@
 
     $data =  DataFromFile($_GET['file']);
     
-    foreach ($data as  $key => $value)
-    {
-        echo ("{$key} : {$value} <br>");
-    }        
-   
+    $vars = array
+    (
+        'survey' => $data
+    );
+
+    buildLayout('survey.html', $vars); 

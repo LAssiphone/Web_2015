@@ -1,0 +1,19 @@
+body
+{
+    font-family: arial;
+}
+
+.benefists
+{
+    width: 317px;
+}
+
+h1
+{
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: solid 6px;
+    padding-left: 21px;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+}

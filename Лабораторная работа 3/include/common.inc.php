@@ -4,4 +4,5 @@
     require_once('vendor/Smarty/libs/Smarty.class.php');
     require_once('request.inc.php');
     require_once('bd_user.inc.php');
+    require_once('images.inc.php');
 

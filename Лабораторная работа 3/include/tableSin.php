@@ -8,8 +8,15 @@
             {
                 return $result;
             }
+            else
+            {
+                return 10;
+            }
         }
-        return 10;
+        else
+        {
+            return 10;
+        }
     }
     
     function GetMinMoveFromGet($MinMove)
@@ -20,11 +27,17 @@
             if (($result < 60) && ($result > 0))
             {
                 return $result;
-            }           
+            }
+            else
+            {
+                return 6;
+            }
         }
-        return 6;
+        else
+        {
+            return 6;
+        }
     }
-    
     function TableSin($degMove, $minMove)
     {
         for ($degrees = 0; $degrees <= 180; $degrees += $degMove) 

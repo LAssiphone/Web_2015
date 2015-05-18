@@ -1,0 +1,9 @@
+h2 {font-family: arial; font-size: 34px; font-weight: normal;}
+.h2.MainTeg {border-bottom: solid 2px blue;}
+.h2.MainStyle {border-bottom: solid 2px red;}
+table {width: 1000px; border-collapse: collapse;}
+table th, table td {border:1px solid; padding:5px;}
+tr.thead {height:50px;}
+.table2 .thead {background-color: rgb(241,241,241);}
+.col1 {width: 100px;}
+.col3 {width: 240px;}
