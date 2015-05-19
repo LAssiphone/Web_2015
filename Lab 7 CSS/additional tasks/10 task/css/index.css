@@ -1,2 +1,49 @@
-/* Here custom styles begin */
-/* Here custom styles end */
+.container_box
+{
+    width: 500px;
+    height: 500px;
+    background: #0099cc;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.red
+{
+    width: 70px;
+    height: 70px;
+    background: #ff0000;
+    position: absolute;
+}
+
+.green
+{
+    width: 100px;
+    height: 100px;
+    background: #00cc00;
+}
+
+.top
+{
+    top:0;
+}
+
+.bottom
+{
+    bottom:0;
+}
+
+.left
+{
+    left:0;
+}
+
+.right
+{
+    right:0;
+}
+
+.center
+{
+    margin: auto;
+}
