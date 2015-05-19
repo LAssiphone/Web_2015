@@ -8,6 +8,125 @@
     border-bottom: none;
 }
 
-/* Here custom styles begin */
+.turquoise
+{
+    width: 700px;
+    height: 50px;
+    background: #00ffff;
+    margin-bottom: 10px;
+}
+  
+.blue
+{
+    width: 900px;
+    height: 30px;
+    background: #33ccff;
+    margin-bottom: 10px;
+}
 
-/* Here custom styles end */
+.navy_blue
+{
+    width: 500px;
+    height: 300px;
+    background: #3399ff;
+    padding: 20px;
+    float: left;
+}
+
+.lilac
+{
+    width: 200px;
+    height: 40px;
+    background: #9999ff;
+    float: left;
+}
+
+.purple
+{
+    width: 250px;
+    height: 70px;
+    background: #cc66ff;
+    float: right;
+    margin-bottom: 15px;
+}
+
+.red
+{
+    width: 100%;
+    height: 50px;
+    background: #ff6666;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.murrey
+{
+    width: 100px;
+    height: 70px;
+    background: #660033;
+    float: left;
+    margin-right: 20px;
+}
+
+.dark_blue
+{
+    width: 80px;
+    height: 70px;
+    background: #000066;
+    float: left;
+}
+
+.brown
+{
+    width: 90px;
+    height: 70px;
+    background: #999966;
+    float: right;
+}
+
+.navy_blue2
+{  
+    width: 400px;
+    height: 300px;
+    background: #6699ff;
+    float: right;
+}
+
+.navy_blue3
+{
+    width: 70px;
+    height: 60px;
+    background: #0033cc;
+    float: left;
+    margin-right: 10px;
+}
+
+.crimson
+{
+    width: 80px;
+    height: 60px;
+    background: #ff00ff;
+    float: left;
+}
+
+.right_line
+{
+    float: right;
+    margin-bottom: 15px;
+}
+
+.left_line
+{
+    float:left;
+    clear: both;
+    margin-bottom: 15px;
+}
+
+.violet
+{
+    width: 100%;
+    height: 50px;
+    background: #6600cc;
+    clear: both;
+}
+
