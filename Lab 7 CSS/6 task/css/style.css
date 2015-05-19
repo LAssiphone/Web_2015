@@ -9,7 +9,7 @@ body
     font-family: arial;
 }
 
-h1
+.title_blue_line
 {
     font-size: 34px;
     font-weight: normal;
@@ -17,7 +17,7 @@ h1
     margin-bottom: 35px;
 }
 
-div 
+.cats 
 {
     width: 220px;
     height: 205px;
@@ -27,7 +27,7 @@ div
     padding-top: 20px;
 }
 
-p
+.cats p
 {
     color: rgb(50,50,46);
     margin: 0;
@@ -50,13 +50,17 @@ p
 {
     background: url("../images/texture2.jpg");
 }
+
 .buttom 
 {
     border:none;
     width: 298px;
-    height: 35px;
+    height: 55px;
     background: url("../images/button.png");
-    font-weight: bold; 
+    font-weight: bold;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;    
 }
 
 .buttom:hover

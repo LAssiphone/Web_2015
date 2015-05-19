@@ -1,0 +1,13 @@
+.main
+{
+    width: 1000px;
+    min-height: 100%;
+    margin: 0 auto;
+    border: 1px solid;
+    border-top: none;
+    border-bottom: none;
+}
+
+/* Here custom styles begin */
+
+/* Here custom styles end */
