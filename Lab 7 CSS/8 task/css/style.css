@@ -7,7 +7,7 @@
 
 body
 {
-    color: #aaaaaa;
+    color: #757575;
 }
 
 .contact_us 
@@ -24,6 +24,7 @@ body
     padding-left: 8px;
     font: 23px Arial;
     margin-bottom: 9px;
+    color: #565656;
 }
 
 .contact_us ul
@@ -31,7 +32,7 @@ body
     list-style:none;
 }
 
-.contact_us ul li
+.contact_us li
 {
     font: normal 14px Tahoma;
     border-bottom: dashed 1px #cccccc;
@@ -41,36 +42,36 @@ body
     letter-spacing: 1.3px;
 }
 
-.contact_us ul li.phone_number,
-.contact_us ul li.fax_number
+.phone_number,
+.fax_number
 {
     font-weight: bold;
     letter-spacing: normal;
 }
 
-.contact_us ul li:nth-child(4),
-.contact_us ul li:last-child
+.contact_us .company_name,
+.contact_us .address
 {
     border: none;
 }
 
-.contact_us .phone_number
+.phone_number
 {
     padding-top: 16px;
     background: url(../images/ico_phone.png) 14px 14px no-repeat;
 }
 
-.contact_us .fax_number
+.fax_number
 {
     background: url(../images/ico_fax.png) 9px 9px no-repeat;
 }
 
-.contact_us .email
+.email
 {
     background: url(../images/ico_mail.png) 8px center no-repeat;
 }
 
-.contact_us .company_name
+.company_name
 {
     background: url(../images/ico_address.png) 6px 7px no-repeat;
     font-size: 16px;
@@ -79,7 +80,7 @@ body
     line-height: 19px;
 }
 
-.contact_us .address
+.address
 {
     padding-top: 0;
     line-height: 22px;

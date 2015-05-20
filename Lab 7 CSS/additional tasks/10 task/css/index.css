@@ -4,8 +4,7 @@
     height: 500px;
     background: #0099cc;
     position: relative;
-    display: table-cell;
-    vertical-align: middle;
+    margin: 50px auto;
 }
 
 .red
@@ -21,6 +20,7 @@
     width: 100px;
     height: 100px;
     background: #00cc00;
+    position: absolute;
 }
 
 .top
@@ -45,5 +45,7 @@
 
 .center
 {
-    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
 }

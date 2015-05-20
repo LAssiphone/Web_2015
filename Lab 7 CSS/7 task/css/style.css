@@ -19,10 +19,9 @@ body
 
 .title_arrow
 {
-    width: 283px;
-    height: 36px;
-    display: table-cell;
-    vertical-align: middle;
+    width: 255px;
+    height: 29px;
+    padding-top: 7px;
     border-bottom: solid 6px;
     background: url(../images/arrow.png) 1px center no-repeat;
     padding-left: 28px;
