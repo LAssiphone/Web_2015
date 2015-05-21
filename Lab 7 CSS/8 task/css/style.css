@@ -23,7 +23,7 @@ body
 {
     padding-left: 8px;
     font: 23px Arial;
-    margin-bottom: 9px;
+    padding-bottom: 11px;
     color: #565656;
 }
 
@@ -42,15 +42,15 @@ body
     letter-spacing: 1.3px;
 }
 
-.phone_number,
-.fax_number
+li.phone_number,
+li.fax_number
 {
     font-weight: bold;
     letter-spacing: normal;
 }
 
-.contact_us .company_name,
-.contact_us .address
+li.company_name,
+li.address
 {
     border: none;
 }
@@ -58,7 +58,7 @@ body
 .phone_number
 {
     padding-top: 16px;
-    background: url(../images/ico_phone.png) 14px 14px no-repeat;
+    background: url(../images/ico_phone.png) 14px 12px no-repeat;
 }
 
 .fax_number
@@ -71,7 +71,7 @@ body
     background: url(../images/ico_mail.png) 8px center no-repeat;
 }
 
-.company_name
+li.company_name
 {
     background: url(../images/ico_address.png) 6px 7px no-repeat;
     font-size: 16px;
@@ -80,7 +80,7 @@ body
     line-height: 19px;
 }
 
-.address
+li.address
 {
     padding-top: 0;
     line-height: 22px;
