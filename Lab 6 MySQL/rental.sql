@@ -75,7 +75,8 @@ mysql> SELECT * FROM dvd
 /* SQL запрос для получения списка DVD дисков, которые в настоящее время
 находятся у клиентов. */
 mysql> SELECT d.title FROM dvd d
-    -> JOIN offer of ON (of.return_date IS NULL);
+    -> JOIN offer of USING (dvd_id)
+    -> WHERE of.return_date IS NULL;
     
 
 /* Напишите SQL запрос для получения списка клиентов, которые брали какие-либо DVD 
