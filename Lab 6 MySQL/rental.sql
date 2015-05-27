@@ -81,7 +81,7 @@ mysql> SELECT d.title FROM dvd d
 /* Напишите SQL запрос для получения списка клиентов, которые брали какие-либо DVD 
 диски в текущем году. В результатах запроса необходимо также отразить какие диски 
 брали клиенты. */
-SELECT c.first_name, c.last_name, d.title, o.offer_date
+mysql> SELECT c.first_name, c.last_name, d.title, o.offer_date
     -> FROM customer c
     -> JOIN dvd d USING (dvd_id)
     -> JOIN offer o USING (customer_id)
