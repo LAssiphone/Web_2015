@@ -74,22 +74,15 @@ mysql> SELECT * FROM dvd
     
 /* SQL запрос для получения списка DVD дисков, которые в настоящее время
 находятся у клиентов. */
-mysql> SELECT * FROM dvd
-    -> WHERE dvd_id IN
-    -> (
-    -> SELECT dvd_id FROM offer
-    -> WHERE return_date IS NULL
-    -> );
-    
-mysql> SELECT dvd_id, title, offer_date FROM dvd, offer
-    -> WHERE offer.return_date IS NULL
-    -> AND offer.dvd_id = dvd.dvd_id;
+mysql> SELECT d.title FROM dvd d
+    -> JOIN offer of ON (of.return_date IS NULL);
     
 
 /* Напишите SQL запрос для получения списка клиентов, которые брали какие-либо DVD 
 диски в текущем году. В результатах запроса необходимо также отразить какие диски 
 брали клиенты. */
-SELECT first_name, last_name, title, offer_date FROM customer, dvd, offer
-    -> WHERE YEAR(offer.offer_date) = YEAR(CURDATE())
-    -> AND dvd.dvd_id = offer.dvd_id
-    -> AND customer.customer_id = offer.customer_id;
+SELECT c.first_name, c.last_name, d.title, o.offer_date
+    -> FROM customer c
+    -> JOIN dvd d USING (dvd_id)
+    -> JOIN offer o USING (customer_id)
+    -> WHERE YEAR(o.offer_date) = YEAR(CURDATE());
