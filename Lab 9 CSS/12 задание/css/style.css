@@ -1,0 +1,111 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.clear
+{
+    clear: both;
+}
+
+body
+{
+    font-family: arial;
+    width: 800px;
+    margin: 0 auto;    
+}
+
+.title_blue_line
+{
+    text-align: center;
+    font-size: 34px;
+    font-weight: normal;
+    border-bottom: solid 2px #2279da;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.cats
+{
+    width: 736px;
+    margin-left: 35px;
+}
+
+.cat 
+{
+    width: 220px;
+    height: 203px;
+    position: relative;
+    border: solid 1px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.cats p
+{
+    color: rgb(50,50,46);
+    margin: 0;
+    margin-top: 2px;
+    font: bold 14px Tahoma;
+}
+
+.cat1, .cat2
+{
+    float: left;
+}
+
+.cat1
+{
+    background: url("../images/texture1.jpg");
+    margin-right: 35px;
+}
+
+.cat2
+{
+    background: url("../images/texture3.jpg");
+}
+
+.cat3
+{
+    float: right;
+    background: url("../images/texture2.jpg");
+}
+
+.buttom 
+{
+    border:none;
+    width: 298px;
+    height: 39px;
+    margin: 0 auto;
+    padding-top: 15px;
+    background: url("../images/button.png");
+    text-align: center;
+    font: bold 16px Tahoma;
+    position: relative;
+    left: -3px;
+}
+
+.buttom:hover
+{
+    background: url("../images/button-over.png");
+    cursor: pointer;    
+}
+
+.winner
+{
+    width: 50px;
+    height: 42px;
+    background-color: #bc8f8f;
+    border: 1px solid #ffd700;
+    border-radius: 13px;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 8px;
+}
