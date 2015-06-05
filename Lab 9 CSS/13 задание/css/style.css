@@ -177,6 +177,11 @@ a:hover
     top: 14px;
 }
 
+.slider_featured_product .nav_prev:hover, .slider_featured_product .nav_next:hover
+{
+    cursor: pointer;
+}
+
 .slider_featured_product .nav_prev
 {
     background: url(../images/slider_featured_product/nav_prev.png);
