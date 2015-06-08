@@ -180,6 +180,7 @@ a:hover
 .slider_featured_product .nav_prev:hover, .slider_featured_product .nav_next:hover
 {
     cursor: pointer;
+    top: 15px;
 }
 
 .slider_featured_product .nav_prev
