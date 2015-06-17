@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Template engine</title> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  
+    <header>
+      <div class="container header">
+        <h2>Header</h2>
+        <a class="right_link" href="register.php">Register</a>
+        <b class="right_link">/</b>
+        <a class="right_link" href="auth.php">Authorization</a>
+      </div>
+    </header>
+    
+    <div class="container main_content">
+      <div class="row">
+        <div class="span3 left_nav ">
+          <h2>Sidebar</h2>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="table_sinus.php">Table Sinuses</a></li>
+            <li><a href="survey_form.php">Survey Form</a></li>
+            <li><a href="surveys.php">Surveys</a></li>
+            <li><a href="image_upload.php">Image Upload</a></li>
+            <li><a href="images.php">Images Gallery</a></li>
+            <li><a href="mysql.php">MySQL Query</a></li>
+          </ul>
+        </div>
+        <div class="span9 content">
+          {$content}
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="container footer">
+        <h3>Footer</h3>
+      </div>
+    </footer>
+    
+  </body>
+</html>

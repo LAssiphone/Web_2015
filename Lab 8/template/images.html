@@ -1,0 +1,14 @@
+<h1>Images gallery</h1>
+<ul class="images_list">
+  {foreach from=$files item=file}
+    <li class="span2">
+      <a href="{$folder}{$file}" target="_blank">
+        {$file} 
+        <img src="{$folder}{$file}" class="img-rounded">
+      </a>
+      <a class="btn btn-danger deleteFile" href="images.php?deleteFile={$file}">Delete</a> 
+    </li>
+  {foreachelse}
+    <h4>Gallery is empty</h4>
+  {/foreach}
+</ul>

@@ -17,18 +17,11 @@
         $data = array();
         if ($result = mysqli_query($g_dbLink, $query))
         {
-            if (is_bool($result))
+            while ($row = mysqli_fetch_assoc($result))
             {
-                $data = $result;
+                array_push($data, $row);
             }
-            else 
-            {
-                while ($row = mysqli_fetch_assoc($result))
-                {
-                    $data[] = $row;
-                }
-                mysqli_free_result($result);
-            }
+            mysqli_free_result($result);
         }
         return $data;
     }

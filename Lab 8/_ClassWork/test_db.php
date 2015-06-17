@@ -9,3 +9,4 @@
 				
 	$result = dbExecute($query);
 	print_r($result);
+	print_r(findDvd("DRAGON"));
