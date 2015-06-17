@@ -50,3 +50,10 @@
         $query = "INSERT INTO users SET user_login='{$login}', user_password='{$password}';";
         return dbExecute($query);
     }
+    
+    function userLoginUpd($user, $userIp, $hash)
+    {
+        $userId = $user['0']['user_id'];
+        $query = "UPDATE users SET user_hash='{$hash}', user_ip=INET_ATON('{$userIp}') WHERE user_id='{$userId}';";
+        return dbExecute($query);
+    }
